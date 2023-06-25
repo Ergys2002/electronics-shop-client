@@ -16,6 +16,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './shared/header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { HomeSliderComponent } from './pages/home-page/home-slider/home-slider.component';
+import {NgbCarouselModule} from "@ng-bootstrap/ng-bootstrap";
+import { NewProductsComponent } from './pages/home-page/new-products/new-products.component';
 
 
 
@@ -32,13 +36,17 @@ import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
     SignUpComponent,
     HeaderComponent,
     NavBarComponent,
+    FooterComponent,
+    HomeSliderComponent,
+    NewProductsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterOutlet,
     NgbModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgbCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

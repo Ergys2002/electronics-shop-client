@@ -634,6 +634,7 @@ textarea.input {
 }
 
 .main-nav>li>a {
+  text-decoration: none;
   padding: 20px 0px;
 }
 
