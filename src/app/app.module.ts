@@ -12,6 +12,12 @@ import { LoginComponent } from './pages/login/login.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { AppRoutingModule } from './app-routing.module';
 import {RouterOutlet} from "@angular/router";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HeaderComponent } from './shared/header/header.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
+
+
 
 @NgModule({
   declarations: [
@@ -23,12 +29,16 @@ import {RouterOutlet} from "@angular/router";
     CartComponent,
     PaymentComponent,
     LoginComponent,
-    SignUpComponent
+    SignUpComponent,
+    HeaderComponent,
+    NavBarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterOutlet
+    RouterOutlet,
+    NgbModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

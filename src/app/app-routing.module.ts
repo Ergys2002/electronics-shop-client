@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {ROUTES, Routes} from "@angular/router";
+import {RouterModule, ROUTES, Routes} from "@angular/router";
 import {HomePageComponent} from "./pages/home-page/home-page.component";
 import {ContactUsComponent} from "./pages/contact-us/contact-us.component";
 import {CartComponent} from "./pages/cart/cart.component";
@@ -27,7 +27,9 @@ const routes: Routes = [
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    RouterModule.forRoot(routes)
+  ],
+  exports : [RouterModule]
 })
 export class AppRoutingModule { }
