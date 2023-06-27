@@ -20,6 +20,10 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HomeSliderComponent } from './pages/home-page/home-slider/home-slider.component';
 import {NgbCarouselModule} from "@ng-bootstrap/ng-bootstrap";
 import { NewProductsComponent } from './pages/home-page/new-products/new-products.component';
+import { ProductsListComponent } from './pages/products/products-list/products-list.component';
+import {MapComponent} from "./pages/contact-us/map/map.component";
+import { ContactFormComponent } from './pages/contact-us/contact-form/contact-form.component';
+import { CartDropdownComponent } from './shared/header/cart-dropdown/cart-dropdown.component';
 
 
 
@@ -39,6 +43,10 @@ import { NewProductsComponent } from './pages/home-page/new-products/new-product
     FooterComponent,
     HomeSliderComponent,
     NewProductsComponent,
+    ProductsListComponent,
+    MapComponent,
+    ContactFormComponent,
+    CartDropdownComponent
   ],
   imports: [
     BrowserModule,

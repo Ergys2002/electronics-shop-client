@@ -2187,4 +2187,12 @@ textarea.input {
   }
 }
 
+.dropdown-toggle{
+  text-decoration: none;
+}
+
+.menu-toggle{
+  text-decoration: none;
+}
+
 

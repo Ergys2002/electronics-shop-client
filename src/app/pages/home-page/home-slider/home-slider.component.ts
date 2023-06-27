@@ -8,5 +8,5 @@ import {NgIf} from "@angular/common";
   styleUrls: ['./home-slider.component.css']
 })
 export class HomeSliderComponent {
-  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/1200/450`);
+  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/1550/650`);
 }

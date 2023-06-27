@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  toggleMenu() {
+    document.getElementById("responsive-nav")?.classList.toggle("active")
+  }
+
+
 }
