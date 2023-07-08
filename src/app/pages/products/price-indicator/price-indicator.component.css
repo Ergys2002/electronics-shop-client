@@ -1,0 +1,65 @@
+.aside {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.aside-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+}
+
+.price-filter {
+  margin-top: 10px;
+}
+
+.input-number {
+  position: relative;
+  display: inline-block;
+}
+
+.price-range select.dropdown {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 10px;
+  font-size: 16px;
+  color: black;
+  border: none;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 200px;
+}
+
+.price-range select.dropdown:focus {
+  outline: none;
+}
+
+.price-range select.dropdown option {
+  background-color: #fff;
+}
+
+.price-range .dropdown-arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 5px 0 5px;
+  border-color: #aaa transparent transparent transparent;
+  pointer-events: none;
+}
+
+.price-range select.dropdown:hover {
+  background-color: #eaeaea;
+}
+
+.price-range select.dropdown:active,
+.price-range select.dropdown.open {
+  background-color: #ddd;
+}

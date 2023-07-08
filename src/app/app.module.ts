@@ -24,6 +24,13 @@ import { ProductsListComponent } from './pages/products/products-list/products-l
 import {MapComponent} from "./pages/contact-us/map/map.component";
 import { ContactFormComponent } from './pages/contact-us/contact-form/contact-form.component';
 import { CartDropdownComponent } from './shared/header/cart-dropdown/cart-dropdown.component';
+import {HttpClientModule} from "@angular/common/http";
+import { ProductComponent } from './shared/product/product.component';
+import {ToastsContainer} from "./shared/toast/toast-container.component";
+import { CategoryChoiceComponent } from './pages/products/category-choice/category-choice.component';
+import { PriceIndicatorComponent } from './pages/products/price-indicator/price-indicator.component';
+import {FormsModule} from "@angular/forms";
+
 
 
 
@@ -46,16 +53,22 @@ import { CartDropdownComponent } from './shared/header/cart-dropdown/cart-dropdo
     ProductsListComponent,
     MapComponent,
     ContactFormComponent,
-    CartDropdownComponent
+    CartDropdownComponent,
+    ProductComponent,
+    CategoryChoiceComponent,
+    PriceIndicatorComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    RouterOutlet,
-    NgbModule,
-    FontAwesomeModule,
-    NgbCarouselModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        RouterOutlet,
+        NgbModule,
+        FontAwesomeModule,
+        NgbCarouselModule,
+        HttpClientModule,
+        ToastsContainer,
+      FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,21 @@
+  <div class="product">
+    <div class="product-img">
+      <img [src]="env.apiBaseUrl + '/img/' + product.photo" [alt]="product.title">
+      <div class="product-label">
+        <span class="new">NEW</span>
+      </div>
+    </div>
+    <div class="product-body">
+      <p class="product-category">{{category.title}}</p>
+      <h3 class="product-name"><a [routerLink]=""  >{{product.title}}</a></h3>
+      <h4 *ngIf="!product.sale" class="product-price">{{product.price | currency:'USD':true }}</h4>
+      <h4 *ngIf="product.sale" class="product-price">{{product.salePrice | currency:'USD':true }} <del class="product-old-price">{{product.price | currency:'USD':true }}</del></h4>
+      <div class="product-rating">
+        <i class="fa fa-star" *ngFor="let star of getStarsArray(product.rating)"></i>
+      </div>
+    </div>
+    <div class="add-to-cart">
+      <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
+    </div>
+  </div>
+

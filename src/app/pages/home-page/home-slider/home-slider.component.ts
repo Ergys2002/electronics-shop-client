@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
-import {NgIf} from "@angular/common";
+import {Component, OnInit} from '@angular/core';
+import {Product} from "../../../models/product.model";
+import {ProductService} from "../../../services/product.service";
+import {environment} from "../../../../environments/environment";
+import {ToastService} from "../../../shared/toast/toast-service";
 
 
 @Component({
@@ -7,6 +10,17 @@ import {NgIf} from "@angular/common";
   templateUrl: './home-slider.component.html',
   styleUrls: ['./home-slider.component.css']
 })
-export class HomeSliderComponent {
-  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/1550/650`);
+export class HomeSliderComponent implements OnInit{
+  products: Product[] | any;
+  public env: any;
+
+  constructor(private productService: ProductService, public toastService: ToastService) {
+  }
+  ngOnInit(): void {
+    this.env = environment;
+    this.productService.getProductsForHomeSlider().subscribe({
+      next: result => {this.products = result},
+      error: err => {this.toastService.show("Error: " + err, { classname: 'bg-danger text-light', delay: 15000 });}
+    })
+  }
 }
